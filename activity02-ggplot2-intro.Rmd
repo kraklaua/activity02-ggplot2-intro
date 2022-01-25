@@ -185,7 +185,7 @@ In the above code chunk, continue to play around with having the aesthetics mapp
 For example, how does having all of them mapped in the `ggplot` call compared to having these instead mapped in the `geom_boxplot` layer?
 Comment on what you notice.
 
-**Response**: Mapping in the ggplot or the geom_boxplot will fill the boxplot.  
+**Response**: Mapping in the ggplot or the geom_boxplot will fill the boxplot. 
 
 
 Knit, then stage everything listed in your **Git** pane, commit (with a meaningful commit message), and push  to your GitHub repo.
@@ -207,17 +207,20 @@ Create graphs to explore the relationship between `bill_length_mm` and each of `
 Using these three graphs to discuss which of these three categorical variables seems to be contributing more to these two peaks and explain your reasoning.
 
 ```{r bill_length_by_species}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = species, fill = species)) +
+  geom_boxplot()
 ```
 
 
 ```{r bill_length_by_sex}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = sex, fill = sex)) +
+  geom_boxplot()
 ```
 
 
 ```{r bill_length_by_island}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = island, fill = island)) +
+  geom_boxplot()
 ```
 
 **Response**:

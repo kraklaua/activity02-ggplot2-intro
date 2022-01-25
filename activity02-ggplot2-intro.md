@@ -275,6 +275,33 @@ graphs). Using these three graphs to discuss which of these three
 categorical variables seems to be contributing more to these two peaks
 and explain your reasoning.
 
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = species, fill = species)) +
+  geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_species-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = sex, fill = sex)) +
+  geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_sex-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = island, fill = island)) +
+  geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_island-1.png)<!-- -->
+
 **Response**:
 
 Knit, then stage everything listed in your **Git** pane, commit (with a
